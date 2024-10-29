@@ -11,4 +11,10 @@ public class Homework5_1 {
             System.out.println("You are adult");
         }
     }
+    public  boolean isPerfectSquare (int number) {
+        if (number < 0){return false;
+        }
+        return (int)Math.sqrt(number)*Math.sqrt(number) == number;
+
+    }
 }
