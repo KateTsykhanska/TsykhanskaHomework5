@@ -15,6 +15,17 @@ public class Homework5_1 {
         if (number < 0){return false;
         }
         return (int)Math.sqrt(number)*Math.sqrt(number) == number;
-
     }
-}
+
+    public static void getGrade (int note) {
+        if (note == 5) {
+            System.out.println("Excellent");
+        } else if (note == 1) {
+            System.out.println("Bad");
+        } else if (note < 0) {
+            System.out.println("Wrong score");
+        }
+
+
+        }
+    }

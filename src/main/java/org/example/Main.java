@@ -14,5 +14,9 @@
             System.out.println("Homework.isPerfectSquare (25): "+homework5_1.isPerfectSquare(25));
             System.out.println("Homework.isPerfectSquare (24): "+homework5_1.isPerfectSquare(24));
 
+            Homework5_1.getGrade(5);
+            Homework5_1.getGrade(1);
+            Homework5_1.getGrade(-3);
+
         }
 }
