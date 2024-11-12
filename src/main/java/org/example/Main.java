@@ -14,5 +14,8 @@
             System.out.println("Homework.isPerfectSquare (25): "+homework5_1.isPerfectSquare(25));
             System.out.println("Homework.isPerfectSquare (24): "+homework5_1.isPerfectSquare(24));
 
+            System.out.println("Is a number simple? " + Homework5_1.simpleNumber(0));
+            System.out.println("Is a number simple? " + Homework5_1.simpleNumber(8));
+            System.out.println("Is a number simple? " + Homework5_1.simpleNumber(7));
         }
 }
