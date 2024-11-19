@@ -1,11 +1,10 @@
 package org.example;
 
-import java.sql.SQLOutput;
-
-public class Person {
+public class Person implements Displayable {
     String name;
     int age;
     String job;
+
 
     Person(String name, int age, String job) {
         this.name = name;
@@ -41,9 +40,15 @@ public class Person {
         System.out.println("Iм'я: " + name + ", Вik: " + age + ", Професiя: " + job);
     }
 
-    public void changeJob(String name, int age, String job) {
+    public void changeJob(String job) {
         this.job = job;
         System.out.println("Пiсля оновлення професії");
-        System.out.println("Iм'я: " + name + ", Вik: " + age + ", Професiя: " + job);
+        System.out.println("Iм'я: " + this.name + ", Вik: " + this.age + ", Професiя: " + this.job);
+    }
+
+
+    @Override
+    public void displayInformation() {
+        System.out.print("Iм'я: " + name + ", Вik: " + age + ", Професiя: " + job);
     }
 }
