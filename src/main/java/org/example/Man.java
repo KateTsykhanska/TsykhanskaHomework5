@@ -18,5 +18,10 @@ public class Man extends Person implements Displayable {
     public void displayInformation() {
         super.displayInformation();
         System.out.println(", Стать: " + sex + " Професiя: " + personRole);
+
+    }
+    @Override
+    public void abstract1() {
+        System.out.println("abstract class");
     }
 }

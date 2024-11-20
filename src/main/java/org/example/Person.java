@@ -1,6 +1,6 @@
 package org.example;
 
-public class Person implements Displayable {
+public abstract class Person implements Displayable {
     String name;
     int age;
     String job;
@@ -50,5 +50,7 @@ public class Person implements Displayable {
     @Override
     public void displayInformation() {
         System.out.print("Iм'я: " + name + ", Вik: " + age + ", Професiя: " + job);
+
     }
+    public abstract void abstract1();
 }
