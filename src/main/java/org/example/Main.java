@@ -1,18 +1,30 @@
 
-    package org.example;
+package org.example;
 
-    public class Main {
-        public static void main (String[] args) {
-            Homework5_1 homework5_1 = new Homework5_1();
-            homework5_1.checkAge(9);
-            homework5_1.checkAge(10);
-            homework5_1.checkAge(0);
-            homework5_1.checkAge(99);
-            homework5_1.checkAge(35);
-            homework5_1.checkAge(25);
+import java.util.HashMap;
+import java.util.Map;
 
-            System.out.println("Homework.isPerfectSquare (25): "+homework5_1.isPerfectSquare(25));
-            System.out.println("Homework.isPerfectSquare (24): "+homework5_1.isPerfectSquare(24));
-
+public class Main {
+    public static Map<String, Integer> getLengthOfStrings(String[] strings) {
+        Map<String, Integer> lengthMap = new HashMap<>();
+        for (String str : strings) {
+            lengthMap.put(str, str.length());
         }
+
+        return lengthMap;
+    }
+
+
+    public static void main(String[] args) {
+        String[] test1 = {"a", "bb", "a", "bb"};
+        System.out.println(getLengthOfStrings(test1));
+        String[] test2 = {"this", "and", "that", "and"};
+        System.out.println(getLengthOfStrings(test2));
+        String[] test3 = {"code", "code", "code", "bug"};
+        System.out.println(getLengthOfStrings(test3));
+
+    }
+
+
 }
+
