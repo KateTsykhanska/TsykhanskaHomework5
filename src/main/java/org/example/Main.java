@@ -1,18 +1,29 @@
+package org.example;
 
-    package org.example;
+import java.util.*;
 
-    public class Main {
-        public static void main (String[] args) {
-            Homework5_1 homework5_1 = new Homework5_1();
-            homework5_1.checkAge(9);
-            homework5_1.checkAge(10);
-            homework5_1.checkAge(0);
-            homework5_1.checkAge(99);
-            homework5_1.checkAge(35);
-            homework5_1.checkAge(25);
+public class Main {
 
-            System.out.println("Homework.isPerfectSquare (25): "+homework5_1.isPerfectSquare(25));
-            System.out.println("Homework.isPerfectSquare (24): "+homework5_1.isPerfectSquare(24));
-
+    public static Map<String, String> createMap(String[] strings) {
+        Map<String, String> map = new HashMap<>();
+        for (String s : strings) {
+            map.put(s.substring(0, 1), s.substring(s.length() - 1));
         }
+        return map;
+    }
+
+    public static void main(String[] args) {
+        String[] input = {"code", "bug"};
+        Map<String, String> result = createMap(input);
+        System.out.println(result);
+
+        String[] input1 = {"man", "moon", "main"};
+        Map<String, String> result1 = createMap(input1);
+        System.out.println(result1);
+
+        String[] input2 = {"man", "moon", "good", "night"};
+        Map<String, String> result2 = createMap(input2);
+        System.out.println(result2);
+
+    }
 }
