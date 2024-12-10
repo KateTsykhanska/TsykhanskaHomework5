@@ -5,11 +5,11 @@ public class Man extends Person implements Displayable {
 
     public static final String sex = "Male";
 
-    Man(String name, int age, String job) {
+    Man(String name, int age, String job) throws PersonalDataException {
         super(name, age, job);
     }
 
-    Man(String name, int age, String job, PersonRole personRole) {
+    Man(String name, int age, String job, PersonRole personRole) throws PersonalDataException {
         this(name, age, job);
         this.personRole = personRole;
     }

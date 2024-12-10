@@ -1,22 +1,25 @@
 package org.example;
 
 public abstract class Person implements Displayable {
-    String name;
-    int age;
-    String job;
+    private String name;
+    private int age;
+    private String job;
 
 
-    Person(String name, int age, String job) {
-        this.name = name;
-        this.age = age;
+    Person(String name, int age, String job) throws PersonalDataException {
+
+        this.setName(name);
+        this.setAge(age);
         this.job = job;
     }
 
-    void setName(String name) {
+    void setName(String name) throws PersonalDataException {
+        if(name == null || name.isBlank()) throw new PersonalDataException("Name field is empty");
         this.name = name;
     }
 
-    void setAge(int age) {
+    void setAge(int age) throws PersonalDataException {
+        if(age<0) throw new PersonalDataException("Age is negative");
         this.age = age;
     }
 
